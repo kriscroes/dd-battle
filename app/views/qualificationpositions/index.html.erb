@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Qualificationpositions</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @qualificationpositions.each do |qualificationposition| %>
+      <tr>
+        <td><%= qualificationposition.name %></td>
+        <td><%= link_to 'Show', qualificationposition %></td>
+        <td><%= link_to 'Edit', edit_qualificationposition_path(qualificationposition) %></td>
+        <td><%= link_to 'Destroy', qualificationposition, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Qualificationposition', new_qualificationposition_path %>

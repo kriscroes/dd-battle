@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Startup:</strong>
+  <%= @qualificationgroup.startup %>
+</p>
+
+<p>
+  <strong>Qualificationposition:</strong>
+  <%= @qualificationgroup.qualificationposition %>
+</p>
+
+<%= link_to 'Edit', edit_qualificationgroup_path(@qualificationgroup) %> |
+<%= link_to 'Back', qualificationgroups_path %>

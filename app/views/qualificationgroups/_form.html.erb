@@ -1,0 +1,25 @@
+<%= form_for(@qualificationgroup) do |f| %>
+  <% if @qualificationgroup.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@qualificationgroup.errors.count, "error") %> prohibited this qualificationgroup from being saved:</h2>
+
+      <ul>
+      <% @qualificationgroup.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :startup_id %><br>
+    <%= f.select :startup_id, options_for_select(Startup.all.map{|s|[s.name, s.id]}) %>
+  </div>
+  <div class="field">
+    <%= f.label :qualificationposition_id %><br>
+    <%= f.select :qualificationposition_id, options_for_select(Qualificationposition.all.map{|s|[s.name, s.id]}) %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

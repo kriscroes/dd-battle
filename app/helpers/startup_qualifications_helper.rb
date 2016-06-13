@@ -1,0 +1,2 @@
+module StartupQualificationsHelper
+end

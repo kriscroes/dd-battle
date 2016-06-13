@@ -1,0 +1,29 @@
+<%= form_for(@finalgroup) do |f| %>
+  <% if @finalgroup.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@finalgroup.errors.count, "error") %> prohibited this finalgroup from being saved:</h2>
+
+      <ul>
+      <% @finalgroup.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :startup_id %><br>
+    <%= f.select :startup_id, options_for_select(Startup.all.map{|s|[s.name, s.id]}) %>
+  </div>
+  <div class="field">
+    <%= f.label :finalposition_id %><br>
+    <%= f.select :finalposition_id, options_for_select(Finalposition.all.map{|s|[s.name, s.id]}) %>
+  </div>
+  <div class="field">
+    <%= f.label :iswinner %><br>
+    <%= f.check_box :iswinner %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

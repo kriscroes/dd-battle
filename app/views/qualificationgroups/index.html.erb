@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Qualificationgroups</h1>
+
+<table class="table table-striped table-hover ">
+  <thead>
+    <tr>
+      <th>Startup</th>
+      <th>Qualificationposition</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @qualificationgroups.each do |qualificationgroup| %>
+      <tr>
+        <td><%= "#{Startup.find(qualificationgroup.startup).name}"%></td>
+        <td><%= "#{Qualificationposition.find(qualificationgroup.qualificationposition).name}"%></td>
+        <td><%= link_to 'Show', qualificationgroup %></td>
+        <td><%= link_to 'Edit', edit_qualificationgroup_path(qualificationgroup) %></td>
+        <td><%= link_to 'Destroy', qualificationgroup, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Qualificationgroup', new_qualificationgroup_path %>

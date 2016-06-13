@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Startup:</strong>
+  <%= @startupparticipant.startup %>
+</p>
+
+<p>
+  <strong>Participant:</strong>
+  <%= @startupparticipant.participant %>
+</p>
+
+<p>
+  <strong>Role:</strong>
+  <%= @startupparticipant.role %>
+</p>
+
+<%= link_to 'Edit', edit_startupparticipant_path(@startupparticipant) %> |
+<%= link_to 'Back', startupparticipants_path %>

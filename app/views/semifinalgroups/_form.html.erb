@@ -1,0 +1,26 @@
+<%= form_for(@semifinalgroup) do |f| %>
+  <% if @semifinalgroup.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@semifinalgroup.errors.count, "error") %> prohibited this semifinalgroup from being saved:</h2>
+
+      <ul>
+      <% @semifinalgroup.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :startup_id %><br>
+    <%= f.select :startup_id, options_for_select(Startup.all.map{|s|[s.name, s.id]}) %>
+  </div>
+  <div class="field">
+    <%= f.label :semifinalposition_id %><br>
+    <%= f.select :semifinalposition_id, options_for_select(Semifinalposition.all.map{|s|[s.name, s.id]}) %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

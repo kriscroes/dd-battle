@@ -1,0 +1,2 @@
+module QualificationgroupsHelper
+end

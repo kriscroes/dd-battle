@@ -1,0 +1,2 @@
+module StartupWinnersHelper
+end

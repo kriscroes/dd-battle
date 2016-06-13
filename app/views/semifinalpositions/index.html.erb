@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Semifinalpositions</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @semifinalpositions.each do |semifinalposition| %>
+      <tr>
+        <td><%= semifinalposition.name %></td>
+        <td><%= link_to 'Show', semifinalposition %></td>
+        <td><%= link_to 'Edit', edit_semifinalposition_path(semifinalposition) %></td>
+        <td><%= link_to 'Destroy', semifinalposition, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Semifinalposition', new_semifinalposition_path %>

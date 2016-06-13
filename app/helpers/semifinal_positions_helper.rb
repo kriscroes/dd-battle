@@ -1,0 +1,2 @@
+module SemifinalPositionsHelper
+end
