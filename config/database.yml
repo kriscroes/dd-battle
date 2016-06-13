@@ -8,10 +8,11 @@ default: &default
   adapter: postgresql
   pool: 5
   timeout: 5000
+  password: 123
 
 development:
   <<: *default
-  database: db/my_database_development
+  database: dashboard_dev
 
 
 # Warning: The database defined as "test" will be erased and
@@ -19,8 +20,8 @@ development:
 # Do not set this db to the same as development or production.
 test:
   <<: *default
-  database: db/my_database_test
+  database: dashboard_dev
 
 production:
   <<: *default
-  database: db/my_database_production
+  database: dashboard_prod
