@@ -1,4 +1,10 @@
 <!-- Row 1 -->
+
+<!-- Button trigger modal -->
+
+<div id="product-modal" class="modal fade" tabindex="-1" role="dialog"></div>
+ <button type="button" class="btn btn-primary">Save changes</button>
+
 <div class='row text-center'>
   <div class='col-md-3'><h2>Qualifications</h2></div>
   <div class='col-md-3'><h2>Semifinals</h2></div>
@@ -17,7 +23,12 @@
 <!-- Row 3-->
 <div class='row text-center'>
   <div class='col-md-3 paddingtop-db'>
-    <p class='marginbottom-p'><%= @startups.find(1).name %></p>
+    <p class='marginbottom-p'>
+      <%= link_to 'test', startups_path, remote: true  %>
+
+      <%= link_to @startup1.name, startup_path(@startup1) , remote: true   %></p>
+
+
     <img src="http://placehold.it/200x50">
   </div>
   <div class='col-md-3'></div>
@@ -191,6 +202,7 @@
   <div class='col-md-3'></div>
   <div class='col-md-3'></div>
 </div>
+
 
 
 

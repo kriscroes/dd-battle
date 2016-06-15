@@ -13,6 +13,11 @@ class DashboardController < ApplicationController
     @finalpos3_id = Finalposition.where(name: 'Three').first.id
 
     Finalgroup.where(finalposition_id: @pos)
+
+
+    @startup1 = Startup.find(1)
   end
+
+
 
 end

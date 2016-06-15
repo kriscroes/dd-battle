@@ -7,9 +7,11 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+
   <%= render 'layouts/shared/navigation'  %>
 
 <div class='container'>
+  <div id="product-modal" class="modal fade"></div>
 <%= yield %>
 </div>
 </body>

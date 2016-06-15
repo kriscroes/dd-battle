@@ -5,11 +5,14 @@ class StartupsController < ApplicationController
   # GET /startups.json
   def index
     @startups = Startup.all
+
   end
 
   # GET /startups/1
   # GET /startups/1.json
   def show
+    #binding.pry
+    @startup = Startup.find(params[:id])
   end
 
   # GET /startups/new
