@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160419203622) do
+ActiveRecord::Schema.define(version: 20160624155504) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -87,8 +87,12 @@ ActiveRecord::Schema.define(version: 20160419203622) do
     t.string   "name"
     t.text     "description"
     t.integer  "track_id"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at",        null: false
+    t.datetime "updated_at",        null: false
+    t.string   "logo_file_name"
+    t.string   "logo_content_type"
+    t.integer  "logo_file_size"
+    t.datetime "logo_updated_at"
   end
 
   add_index "startups", ["track_id"], name: "index_startups_on_track_id", using: :btree

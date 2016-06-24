@@ -1,6 +1,7 @@
 <p id="notice"><%= notice %></p>
 
 <h1>Listing Startups</h1>
+ <%= image_tag @startups.find(1).logo.url ,size: '50'%>
 
 <table class="table table-striped table-hover ">
   <thead>
@@ -8,16 +9,18 @@
       <th>Name</th>
       <th>Description</th>
       <th>Track</th>
-      <th colspan="3"></th>
+      <th>Logo</th>
+      <th colspan="4"></th>
     </tr>
   </thead>
 
   <tbody>
-    <% @startups.each do |startup| %>
+    <% @startups.order(id: :asc).each do |startup| %>
       <tr>
         <td><%= startup.name %></td>
         <td><%= startup.description %></td>
         <td><%= "#{Track.find(startup.track).name}"%></td>
+        <td><%= image_tag startup.logo.url ,size: '50' %></td>
         <td><%= link_to 'Show', startup %></td>
         <td><%= link_to 'Edit', edit_startup_path(startup) %></td>
         <td><%= link_to 'Destroy', startup, method: :delete, data: { confirm: 'Are you sure?' } %></td>

@@ -39,6 +39,9 @@ gem 'rails-erd'
 
 gem 'rails_12factor'
 
+#added paperclip for image upload
+gem "paperclip"
+
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'

@@ -25,7 +25,7 @@
   <div class='col-md-3 paddingtop-db'>
     <p class='marginbottom-p'>
       <!--<%= link_to @startup1.name, startup_path(@startup1) , remote: true unless @astartup1.nil?   %>-->
-       <img src="<%= image_url('startup1.jpg')%>" height="50" width="50"> <%=@startups.find(1).name %>  
+       <%= image_tag @startups.find(1).logo.url ,size: '50'%> <%=@startups.find(1).name %>  
     </p>
       
   </div>
