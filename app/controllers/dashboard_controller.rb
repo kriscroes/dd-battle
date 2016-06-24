@@ -1,7 +1,7 @@
 class DashboardController < ApplicationController
 
   def index
-   # @startups = Startup.all
+   @startups = Startup.all
     #@semifinalstartups = Semifinalgroup.all
     
 
