@@ -134,8 +134,13 @@
   <!-- Demo Day Winner-->
   <div class='col-md-3 paddingtop-db'>
     <p class='marginbottom-p'>
-      <%= image_tag @startups.find(@finalstartups.where(iswinner: true).first.startup_id).logo.url ,size: '50'%>
-      <%=@startups.find(@finalstartups.where(iswinner: true).first.startup_id ).name %> 
+      <% if (@finalstartups.where(iswinner: true)).count == 0 %>
+        <img src="<%= image_url('noimage.png')%>" height="50" width="50"> Undefined
+      <% else %>
+        <%= image_tag @startups.find(@finalstartups.where(iswinner: true).first.startup_id).logo.url ,size: '50'%>
+        <%=@startups.find(@finalstartups.where(iswinner: true).first.startup_id ).name %>
+      <% end %>
+
     </p>
   </div>
 </div>

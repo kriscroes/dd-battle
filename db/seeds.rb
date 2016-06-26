@@ -81,9 +81,9 @@ Finalposition.create(name: "1")
 Finalposition.create(name: "2")
 Finalposition.create(name: "3")
 
-Finalgroup.create(startup_id: 3, finalposition_id: 1)
-Finalgroup.create(startup_id: 7, finalposition_id: 2)
-Finalgroup.create(startup_id: 12, finalposition_id: 3)
+Finalgroup.create(startup_id: 3, finalposition_id: 1, iswinner: true)
+Finalgroup.create(startup_id: 7, finalposition_id: 2, iswinner: false)
+Finalgroup.create(startup_id: 12, finalposition_id: 3, iswinner: false) 
 
 #participants(founders) per startup
 Startupparticipant.create(startup_id: 1, participant_id: 1, role: "CEO")
