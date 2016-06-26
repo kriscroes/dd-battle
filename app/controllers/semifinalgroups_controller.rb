@@ -42,7 +42,7 @@ class SemifinalgroupsController < ApplicationController
   def update
     respond_to do |format|
       if @semifinalgroup.update(semifinalgroup_params)
-        format.html { redirect_to @semifinalgroup, notice: 'Semifinalgroup was successfully updated.' }
+        format.html { redirect_to edit_semifinalgroup_path, notice: 'Semifinalgroup was successfully updated.' }
         format.json { render :show, status: :ok, location: @semifinalgroup }
       else
         format.html { render :edit }
@@ -69,6 +69,6 @@ class SemifinalgroupsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def semifinalgroup_params
-      params.require(:semifinalgroup).permit(:startup_id, :semifinalposition_id)
+      params.require(:semifinalgroup).permit(:id, :startup_id, :semifinalposition_id)
     end
 end

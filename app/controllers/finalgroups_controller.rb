@@ -42,7 +42,7 @@ class FinalgroupsController < ApplicationController
   def update
     respond_to do |format|
       if @finalgroup.update(finalgroup_params)
-        format.html { redirect_to @finalgroup, notice: 'Finalgroup was successfully updated.' }
+        format.html { redirect_to edit_finalgroup_path, notice: 'Finalgroup was successfully updated.' }
         format.json { render :show, status: :ok, location: @finalgroup }
       else
         format.html { render :edit }

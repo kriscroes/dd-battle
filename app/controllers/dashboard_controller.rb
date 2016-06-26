@@ -1,11 +1,9 @@
 class DashboardController < ApplicationController
 
   def index
-   @startups = Startup.all
-    #@semifinalstartups = Semifinalgroup.all
-    
-
-    #@finalstartups = Finalgroup.all
+    @startups = Startup.all
+    @semifinalstartups = Semifinalgroup.all
+    @finalstartups = Finalgroup.all
 
 
     #@finalpos1_id = Finalposition.where(name: 'One').first.id

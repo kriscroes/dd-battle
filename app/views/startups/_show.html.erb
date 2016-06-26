@@ -2,10 +2,60 @@
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title"><%= @startup.name  %></h4>
+        <h2 style="color:#18bc9c;"><%= @startup.name  %> </h2>
       </div>
-      <div class="modal-body">
-        <p><%= @startup.description  %>&hellip;</p>
+      <div class="modal-body">    
+        <div class="row text-center">
+          <div class="col-md-1">
+            <%= image_tag @startup.logo.url ,size: '60'%>  
+          </div>
+          <div class="col-md-7">
+            <h4 style="color:#18bc9c;">About <%= @startup.name %></h4>
+            <p><%= @startup.description %></p>
+          </div>
+          <div class="col-md-2">
+            <h4 style="color:#18bc9c;">Track</h4>
+            <p><%= @startup.track.name %></p>
+          </div>
+          <div class="col-md-2">
+            <h4 style="color:#18bc9c;">Country</h4>
+            <p>United States</p>
+          </div>
+        </div>
+        <div class="row text-center" style="margin-top:20px;">
+          <div class="col-md-12"><h4 style="color:#18bc9c;">Meet the team at ATECH</h4></div>
+        </div>
+        <div class="row text-center" style="margin-top:10px;">
+          <div class="col-md-1">
+            <img src="<%= image_url('founder1.jpg')%>" class="roundedcorners">
+          </div>
+          <div class="col-md-3">
+            <h5>Herbert Ryan</h5>
+            <p>CTO</p>
+          </div>
+          <div class="col-md-6">
+            <p>Curabitur blandit mollis lacus. Nunc egestas, augue at pellentesque laoreet, felis eros vehicula leo, at malesuada velit leo quis pede.</p>
+          </div>
+          <div class="col-md-1">
+            <p><img src="<%= image_url('twitter.png')%>" height="15" width="15">ryanherbert</p>
+          </div>
+        </div>
+        <div class="row text-center" style="margin-top:10px;">
+          <div class="col-md-1">
+            <img src="<%= image_url('founder2.jpg')%>" class="roundedcorners">
+          </div>
+          <div class="col-md-3">
+            <h5>Jens Höfflin</h5>
+            <p>CTO</p>
+          </div>
+          <div class="col-md-6">
+            <p>Curabitur blandit mollis lacus. Nunc egestas, augue at pellentesque laoreet, felis eros vehicula leo, at malesuada velit leo quis pede.</p>
+          </div>
+          <div class="col-md-1">
+            <p><img src="<%= image_url('twitter.png')%>" height="15" width="15">jlinn</p>
+          </div>
+        </div>
+      
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>

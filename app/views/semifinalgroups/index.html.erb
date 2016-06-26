@@ -5,18 +5,17 @@
 <table class="table table-striped table-hover ">
   <thead>
     <tr>
-      <th>Startup</th>
       <th>Semifinalposition</th>
+      <th>Startup</th>
       <th colspan="3"></th>
     </tr>
   </thead>
 
   <tbody>
-    <% @semifinalgroups.each do |semifinalgroup| %>
+    <% @semifinalgroups.order(semifinalposition_id: :asc).each do |semifinalgroup| %>
       <tr>
-     
-        <td><%= "#{Startup.find(semifinalgroup.startup).name}"%></td>
         <td><%= "#{Semifinalposition.find(semifinalgroup.semifinalposition).name}"%></td>
+        <td><%= "#{Startup.find(semifinalgroup.startup).name}"%></td>
         <td><%= link_to 'Show', semifinalgroup %></td>
         <td><%= link_to 'Edit', edit_semifinalgroup_path(semifinalgroup) %></td>
         <td><%= link_to 'Destroy', semifinalgroup, method: :delete, data: { confirm: 'Are you sure?' } %></td>

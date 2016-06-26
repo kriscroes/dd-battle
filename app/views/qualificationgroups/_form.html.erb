@@ -12,12 +12,13 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :startup_id %><br>
-    <%= f.select :startup_id, options_for_select(Startup.all.map{|s|[s.name, s.id]}) %>
+    <%= f.label :qualificationposition_id %><br>
+    <%= f.select :qualificationposition_id, options_for_select(Qualificationposition.all.map{|s|[s.name, s.id]},selected: @qualificationgroup.qualificationposition_id) %>
+  
   </div>
   <div class="field">
-    <%= f.label :qualificationposition_id %><br>
-    <%= f.select :qualificationposition_id, options_for_select(Qualificationposition.all.map{|s|[s.name, s.id]}) %>
+    <%= f.label :startup_id %><br>
+    <%= f.select :startup_id, options_for_select(Startup.all.map{|s|[s.name, s.id]}, selected: @qualificationgroup.startup_id) %>
   </div>
   <div class="actions">
     <%= f.submit %>

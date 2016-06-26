@@ -42,7 +42,7 @@ class QualificationgroupsController < ApplicationController
   def update
     respond_to do |format|
       if @qualificationgroup.update(qualificationgroup_params)
-        format.html { redirect_to @qualificationgroup, notice: 'Qualificationgroup was successfully updated.' }
+        format.html { redirect_to edit_qualificationgroup_path, notice: 'Qualificationgroup was successfully updated.' }
         format.json { render :show, status: :ok, location: @qualificationgroup }
       else
         format.html { render :edit }

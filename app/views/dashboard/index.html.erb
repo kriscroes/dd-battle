@@ -1,7 +1,4 @@
 <!-- Row 1 -->
-
-<!-- Button trigger modal -->
-
 <div id="product-modal" class="modal fade" tabindex="-1" role="dialog"></div>
 
 <div class='row text-center'>
@@ -24,8 +21,8 @@
   <!-- Qualifications pos 1-->
   <div class='col-md-3 paddingtop-db'>
     <p class='marginbottom-p'>
-      <!--<%= link_to @startup1.name, startup_path(@startup1) , remote: true unless @astartup1.nil?   %>-->
-       <%= image_tag @startups.find(1).logo.url ,size: '50'%> <%=@startups.find(1).name %>  
+      <%= link_to image_tag(@startups.find(1).logo.url ,size: '50'), startup_path(@startups.find(1)) , remote: true  %>
+      <%=@startups.find(1).name %>  
     </p>
       
   </div>
@@ -39,25 +36,26 @@
   <!-- Qualifications pos 2-->
   <div class='col-md-3 paddingtop-db'>
     <p class='marginbottom-p'>
-       <img src="<%= image_url('startup2.jpg')%>" height="50" width="50"> <%=@startups.find(2).name %>  
+       <%= image_tag @startups.find(2).logo.url ,size: '50'%> <%=@startups.find(2).name %>  
     </p>
   </div>
   <!-- Semifinals pos 1-->
   <div class='col-md-3 paddingtop-db'>
     <p class='marginbottom-p'>
-       <img src="<%= image_url('startup2.jpg')%>" height="50" width="50"> <%=@startups.find(2).name %>  
+      <%= image_tag @startups.find(@semifinalstartups.where(semifinalposition_id: 1).first.startup_id).logo.url ,size: '50'%>
+      <%=@startups.find(@semifinalstartups.where(semifinalposition_id: 1).first.startup_id ).name %> 
     </p>
   </div>
   <div class='col-md-3'></div>
   <div class='col-md-3'></div>
 </div>
 
-<!-- -->
+<!-- Row 5 -->
 <div class='row text-center'>
   <!-- Qualifications pos 3-->
   <div class='col-md-3 paddingtop-db'>
     <p class='marginbottom-p'>
-       <img src="<%= image_url('startup3.jpg')%>" height="50" width="50"> <%=@startups.find(3).name %>  
+       <%= image_tag @startups.find(3).logo.url ,size: '50'%> <%=@startups.find(3).name %>  
     </p>
   </div>
   <div class='col-md-3'></div>
@@ -65,143 +63,190 @@
   <div class='col-md-3'></div>
 </div>
 
+<!-- Row 6 -->
 <div class='row text-center'>
   <!-- Qualifications pos 4-->
   <div class='col-md-3 paddingtop-db paddingbottom-db'>
     <p class='marginbottom-p'>
-       <img src="<%= image_url('startup4.jpg')%>" height="50" width="50"> <%=@startups.find(4).name %>  
+       <%= image_tag @startups.find(4).logo.url ,size: '50'%> <%=@startups.find(4).name %>  
     </p>
   </div>
+  <!-- Semifinals pos 2-->
   <div class='col-md-3 paddingtop-db'>
-    <p class='marginbottom-p'>Semifinals 2</p>
-  <img src="http://placehold.it/200x50">
+    <p class='marginbottom-p'>
+      <%= image_tag @startups.find(@semifinalstartups.where(semifinalposition_id: 2).first.startup_id).logo.url ,size: '50'%>
+      <%=@startups.find(@semifinalstartups.where(semifinalposition_id: 2).first.startup_id ).name %>   
+    </p>
   </div>
   <div class='col-md-3'></div>
   <div class='col-md-3'></div>
 </div>
 
-<!-- -->
+<!-- Row 6 -->
 <div class='row text-center'>
   <div class='col-md-3'><h4 class='paddingtop-round'>Round 2</h4></div>
   <div class='col-md-3'></div>
+  <!-- Finals pos 1-->
+  <div class='col-md-3 paddingtop-db'>
+    <p class='marginbottom-p'>
+      <%= image_tag @startups.find(@finalstartups.where(finalposition_id: 1).first.startup_id).logo.url ,size: '50'%>
+      <%=@startups.find(@finalstartups.where(finalposition_id: 1).first.startup_id ).name %>  
+    </p>
+  </div>
+  <div class='col-md-3'></div>
+</div>
+
+<!-- Row 7 -->
+<div class='row text-center'>
+  <!-- Qualifications pos 5-->
+  <div class='col-md-3 paddingtop-db'>
+    <p class='marginbottom-p'>
+       <%= image_tag @startups.find(5).logo.url ,size: '50'%> <%=@startups.find(5).name %>  
+    </p>
+  </div>
+  <!-- Semifinals pos 3-->
+  <div class='col-md-3 paddingtop-db'>
+    <p class='marginbottom-p'>
+      <%= image_tag @startups.find(@semifinalstartups.where(semifinalposition_id: 3).first.startup_id).logo.url ,size: '50'%>
+      <%=@startups.find(@semifinalstartups.where(semifinalposition_id: 3).first.startup_id ).name %>     
+    </p>
+  </div>
+  <div class='col-md-3'></div>
+  <div class='col-md-3'><img src="<%= image_url('throphy.png')%>" height="100" width="100" class="bringtofront"></div>
+</div>
+
+<!-- Row 8 -->
+<div class='row text-center'>
+  <!-- Qualifications pos 6-->
+  <div class='col-md-3 paddingtop-db'>
+    <p class='marginbottom-p'>
+       <%= image_tag @startups.find(6).logo.url ,size: '50'%> <%=@startups.find(6).name %>  
+    </p>
+  </div>
+  <div class='col-md-3'></div>
+  <!-- Finals pos 2-->
+  <div class='col-md-3 paddingtop-db'>
+    <p class='marginbottom-p'>
+      <%= image_tag @startups.find(@finalstartups.where(finalposition_id: 2).first.startup_id).logo.url ,size: '50'%>
+      <%=@startups.find(@finalstartups.where(finalposition_id: 2).first.startup_id ).name %>   
+    </p>
+  </div>
+  <!-- Demo Day Winner-->
+  <div class='col-md-3 paddingtop-db'>
+    <p class='marginbottom-p'>
+      <%= image_tag @startups.find(@finalstartups.where(iswinner: true).first.startup_id).logo.url ,size: '50'%>
+      <%=@startups.find(@finalstartups.where(iswinner: true).first.startup_id ).name %> 
+    </p>
+  </div>
+</div>
+
+<!-- Row 9 -->
+<div class='row text-center'>
+  <!-- Qualifications pos 7-->
+  <div class='col-md-3 paddingtop-db'>
+    <p class='marginbottom-p'>
+      <%= image_tag @startups.find(7).logo.url ,size: '50'%> <%=@startups.find(7).name %>  
+    </p>
+  </div>
+  <!-- Semifinals pos 4-->
+  <div class='col-md-3 paddingtop-db'>
+    <p class='marginbottom-p'>
+      <%= image_tag @startups.find(@semifinalstartups.where(semifinalposition_id: 4).first.startup_id).logo.url ,size: '50'%>
+      <%=@startups.find(@semifinalstartups.where(semifinalposition_id: 4).first.startup_id ).name %>  
+    </p>
+  </div>
+  <div class='col-md-3'></div>
+  <div class='col-md-3'></div>
+</div>
+
+<!-- Row 10 -->
+<div class='row text-center'>
+  <!-- Qualifications pos 8-->
   <div class='col-md-3 paddingtop-db paddingbottom-db'>
-    <p class='marginbottom-p'>Finals 1</p>
-    <img src="http://placehold.it/200x50">
+    <p class='marginbottom-p'>
+       <%= image_tag @startups.find(8).logo.url ,size: '50'%> <%=@startups.find(8).name %>  
+    </p>
   </div>
   <div class='col-md-3'></div>
-</div>
-
-<!-- -->
-<div class='row text-center'>
-  <div class='col-md-3 paddingtop-db'>
-    <p class='marginbottom-p'></p>
-    <img src="http://placehold.it/200x50">
-  </div>
-  <div class='col-md-3 paddingtop-db'>
-    <p class='marginbottom-p'></p>
-    <img src="http://placehold.it/200x50">
-  </div>
-  <div class='col-md-3'></div>
-  <div class='col-md-3'><img src="<%= image_url('throphy.png')%>" height="100" width="100"></div>
-</div>
-
-<!-- -->
-<div class='row text-center'>
-  <div class='col-md-3 paddingtop-db'>
-    <p class='marginbottom-p'></p>
-    <img src="http://placehold.it/200x50">
-  </div>
-  <div class='col-md-3'></div>
+  <!-- Finals pos 3-->
   <div class='col-md-3 paddingtop-db paddingbottom-db'>
-    <p class='marginbottom-p'></p>
-    <img src="http://placehold.it/200x50">
+    <p class='marginbottom-p'>
+      <%= image_tag @startups.find(@finalstartups.where(finalposition_id: 3).first.startup_id).logo.url ,size: '50'%>
+      <%=@startups.find(@finalstartups.where(finalposition_id: 3).first.startup_id ).name %>   
+    </p>
   </div>
-    <div class='col-md-3 paddingtop-db paddingbottom-db'>
-    <p class='marginbottom-p'></p>
-    <img src="http://placehold.it/200x50">
-  </div>
+
+  <div class='col-md-3'></div>
 </div>
 
-<!-- -->
+<!-- Row 11 -->
 <div class='row text-center'>
-  <div class='col-md-3 paddingtop-db'>
-    <p class='marginbottom-p'></p>
-    <img src="http://placehold.it/200x50">
+  <div class='col-md-3'>
+    <h4 class='paddingtop-round'>Round 3</h4>
   </div>
+  <!-- Semifinals pos 5-->
   <div class='col-md-3 paddingtop-db'>
-    <p class='marginbottom-p'></p>
-    <img src="http://placehold.it/200x50">
+    <p class='marginbottom-p'>
+      <%= image_tag @startups.find(@semifinalstartups.where(semifinalposition_id: 5).first.startup_id).logo.url ,size: '50'%>
+      <%=@startups.find(@semifinalstartups.where(semifinalposition_id: 5).first.startup_id ).name %>  
+    </p>
   </div>
   <div class='col-md-3'></div>
   <div class='col-md-3'></div>
 </div>
 
-<!-- -->
+<!-- Row 12 -->
 <div class='row text-center'>
+   <!-- Qualifications pos 9-->
+  <div class='col-md-3 paddingtop-db'>
+    <p class='marginbottom-p'>
+       <%= image_tag @startups.find(9).logo.url ,size: '50'%> <%=@startups.find(9).name %>  
+    </p>
+  </div>
+  <div class='col-md-3'></div>
+  <div class='col-md-3'></div>
+  <div class='col-md-3'></div>
+</div>
+
+<!-- Row 13 -->
+<div class='row text-center'>
+  <!-- Qualifications pos 10-->
+  <div class='col-md-3 paddingtop-db'>
+    <p class='marginbottom-p'>
+       <%= image_tag @startups.find(10).logo.url ,size: '50'%> <%=@startups.find(10).name %>  
+    </p>
+  </div>
+  <!-- Semifinals pos 6-->
+  <div class='col-md-3 paddingtop-db'>
+    <p class='marginbottom-p'>
+      <%= image_tag @startups.find(@semifinalstartups.where(semifinalposition_id: 6).first.startup_id).logo.url ,size: '50'%>
+      <%=@startups.find(@semifinalstartups.where(semifinalposition_id: 6).first.startup_id ).name %>   
+    </p>
+  </div>
+  <div class='col-md-3'></div>
+  <div class='col-md-3'></div>
+</div>
+
+<!-- Row 14 -->
+<div class='row text-center'>
+  <!-- Qualifications pos 11-->
+  <div class='col-md-3 paddingtop-db'>
+    <p class='marginbottom-p'>
+       <%= image_tag @startups.find(11).logo.url ,size: '50'%> <%=@startups.find(11).name %>  
+    </p>
+  </div>
+  <div class='col-md-3'></div>
+  <div class='col-md-3'></div>
+  <div class='col-md-3'></div>
+</div>
+
+<!-- Row 15 -->
+<div class='row text-center'>
+  <!-- Qualifications pos 12-->
   <div class='col-md-3 paddingbottom-db paddingtop-db'>
-    <p class='marginbottom-p'></p>
-    <img src="http://placehold.it/200x50">
-  </div>
-  <div class='col-md-3'></div>
-  <div class='col-md-3 paddingtop-db paddingbottom-db'>
-    <p class='marginbottom-p'></p>
-    <img src="http://placehold.it/200x50">
-  </div>
-  <div class='col-md-3'></div>
-</div>
-
-<!-- -->
-<div class='row text-center'>
-  <div class='col-md-3'><h4 class='paddingtop-round'>Round 3</h4></div>
-  <div class='col-md-3 paddingtop-db'>
-    <p class='marginbottom-p'></p>
-    <img src="http://placehold.it/200x50">
-  </div>
-  <div class='col-md-3'></div>
-  <div class='col-md-3'></div>
-</div>
-
-<!-- -->
-<div class='row text-center'>
-  <div class='col-md-3 paddingtop-db'>
-    <p class='marginbottom-p'></p>
-    <img src="http://placehold.it/200x50">
-  </div>
-  <div class='col-md-3'></div>
-  <div class='col-md-3'></div>
-  <div class='col-md-3'></div>
-</div>
-
-<!-- -->
-<div class='row text-center'>
-  <div class='col-md-3 paddingtop-db'>
-    <p class='marginbottom-p'></p>
-    <img src="http://placehold.it/200x50">
-  </div>
-  <div class='col-md-3 paddingtop-db'>
-    <p class='marginbottom-p'></p>
-    <img src="http://placehold.it/200x50">
-  </div>
-  <div class='col-md-3'></div>
-  <div class='col-md-3'></div>
-</div>
-
-<!-- -->
-<div class='row text-center'>
-  <div class='col-md-3 paddingtop-db'>
-    <p class='marginbottom-p'></p>
-    <img src="http://placehold.it/200x50">
-  </div>
-  <div class='col-md-3'></div>
-  <div class='col-md-3'></div>
-  <div class='col-md-3'></div>
-</div>
-
-<!-- -->
-<div class='row text-center'>
-  <div class='col-md-3 paddingbottom-db paddingtop-db'>
-    <p class='marginbottom-p'></p>
-    <img src="http://placehold.it/200x50">
+    <p class='marginbottom-p'>
+      <%= image_tag @startups.find(12).logo.url ,size: '50'%> <%=@startups.find(12).name %> 
+    </p>
   </div>
   <div class='col-md-3'></div>
   <div class='col-md-3'></div>

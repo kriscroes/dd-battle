@@ -5,17 +5,17 @@
 <table class="table table-striped table-hover ">
   <thead>
     <tr>
-      <th>Startup</th>
       <th>Qualificationposition</th>
+      <th>Startup</th>
       <th colspan="3"></th>
     </tr>
   </thead>
 
   <tbody>
-    <% @qualificationgroups.each do |qualificationgroup| %>
+    <% @qualificationgroups.order(qualificationposition_id: :asc).each do |qualificationgroup| %>
       <tr>
-        <td><%= "#{Startup.find(qualificationgroup.startup).name}"%></td>
         <td><%= "#{Qualificationposition.find(qualificationgroup.qualificationposition).name}"%></td>
+        <td><%= "#{Startup.find(qualificationgroup.startup).name}"%></td>
         <td><%= link_to 'Show', qualificationgroup %></td>
         <td><%= link_to 'Edit', edit_qualificationgroup_path(qualificationgroup) %></td>
         <td><%= link_to 'Destroy', qualificationgroup, method: :delete, data: { confirm: 'Are you sure?' } %></td>

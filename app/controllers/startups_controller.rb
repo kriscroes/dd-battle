@@ -47,7 +47,7 @@ class StartupsController < ApplicationController
   def update
     respond_to do |format|
       if @startup.update(startup_params)
-        format.html { redirect_to startups_path, notice: 'Startup was successfully updated.' }
+        format.html { redirect_to edit_startup_path, notice: 'Startup was successfully updated.' }
         format.json { render :show, status: :ok, location: @startup }
       else
         format.html { render :edit }
@@ -74,6 +74,6 @@ class StartupsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def startup_params
-      params.require(:startup).permit(:name, :description, :track_id, :logo)
+      params.require(:startup).permit(:id, :name, :description, :track_id, :logo)
     end
 end

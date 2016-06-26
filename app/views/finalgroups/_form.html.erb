@@ -12,12 +12,12 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :startup_id %><br>
-    <%= f.select :startup_id, options_for_select(Startup.all.map{|s|[s.name, s.id]}) %>
+    <%= f.label :finalposition_id %><br>
+    <%= f.select :finalposition_id, options_for_select(Finalposition.all.map{|s|[s.name, s.id]}, selected: @finalgroup.finalposition_id) %>
   </div>
   <div class="field">
-    <%= f.label :finalposition_id %><br>
-    <%= f.select :finalposition_id, options_for_select(Finalposition.all.map{|s|[s.name, s.id]}) %>
+    <%= f.label :startup_id %><br>
+    <%= f.select :startup_id, options_for_select(Startup.all.map{|s|[s.name, s.id]}, selected: @finalgroup.startup_id) %>
   </div>
   <div class="field">
     <%= f.label :iswinner %><br>
