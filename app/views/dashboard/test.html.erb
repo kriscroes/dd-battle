@@ -1,0 +1,179 @@
+<!-- Row 1 -->
+
+<div class='row text-center'>
+  <div class='col-md-2'><h2>Qualifications</h2></div>
+  <div class='col-md-2'><h2>Semifinals</h2></div>
+  <div class='col-md-4'><h2>Final</h2></div>
+  <div class='col-md-2'><h2>Semifinals</h2></div>
+  <div class='col-md-2'><h2>Qualifications</h2></div>
+</div>
+
+<!-- Row 2-->
+
+<div class='row text-center'>
+  <div class='col-md-2'><h4>Group 1</h4></div>
+  <div class='col-md-2'></div>
+  <div class='col-md-4'></div>
+  <div class='col-md-2'></div>
+  <div class='col-md-2'><h4>Group 3</h4></div>
+</div>
+
+<!-- Row 3-->
+<div class='row text-center'>
+  <div class="col-md-2">
+    <%= link_to startup_path(@startups.find(1)), remote: true, :action => 'go' do %> 
+      <div class='card hoverable style-card'>
+        <p class='marginbottom-p'><%= image_tag(@startups.find(1).logo ,size: '50') %> <%= @startups.find(1).name %>  </p>   
+      </div>
+    <% end %>
+  </div>
+  <div class='col-md-2'></div>
+  <div class='col-md-4'></div>
+  <div class='col-md-2'></div>
+  <div class="col-md-2">
+    <%= link_to startup_path(@startups.find(7)), remote: true, :action => 'go' do %> 
+      <div class='card hoverable style-card-r'>
+        <p class='marginbottom-p'><%= @startups.find(7).name %> <%= image_tag(@startups.find(7).logo ,size: '50') %> </p>   
+      </div>
+    <% end %>
+  </div>
+</div>
+
+<!-- Row 4-->
+<div class='row text-center'>
+  <div class="col-md-2">
+    <%= link_to startup_path(@startups.find(2)), remote: true, :action => 'go' do %> 
+      <div class='card hoverable style-card'>
+        <p class='marginbottom-p'><%= image_tag(@startups.find(2).logo ,size: '50') %> <%= @startups.find(2).name %></p>   
+      </div>
+    <% end %>
+  </div>
+  <div class="col-md-2">
+    <%= link_to startup_path(@startups.find(@semifinalstartups.where(semifinalposition_id: 1).first.startup_id)), remote: true, :action => 'go' do %>
+        <div class='card hoverable style-card'>
+          <p class='marginbottom-p'><%= image_tag(@startups.find(@semifinalstartups.where(semifinalposition_id: 1).first.startup_id).logo ,size: '50') %> <%= @startups.find(@semifinalstartups.where(semifinalposition_id: 1).first.startup_id).name %></p>
+        </div>
+    <% end %>
+  </div>
+  <div class='col-md-4'></div>
+  <div class='col-md-2'></div>
+  <div class="col-md-2">
+    <%= link_to startup_path(@startups.find(8)), remote: true, :action => 'go' do %> 
+      <div class='card hoverable style-card-r'>
+        <p class='marginbottom-p'><%= @startups.find(8).name %> <%= image_tag(@startups.find(8).logo ,size: '50') %></p>   
+      </div>
+    <% end %>
+  </div>
+</div>
+
+<!-- Row 5-->
+<div class='row text-center'>
+  <div class="col-md-2">
+    <%= link_to startup_path(@startups.find(3)), remote: true, :action => 'go' do %> 
+      <div class='card hoverable style-card'>
+        <p class='marginbottom-p'><%= image_tag(@startups.find(3).logo ,size: '50') %> <%= @startups.find(3).name %>  </p>   
+      </div>
+    <% end %>
+  </div>
+  <div class="col-md-2">
+    <%= link_to startup_path(@startups.find(@semifinalstartups.where(semifinalposition_id: 2).first.startup_id)), remote: true, :action => 'go' do %>
+        <div class='card hoverable style-card'>
+          <p class='marginbottom-p'><%= image_tag(@startups.find(@semifinalstartups.where(semifinalposition_id: 2).first.startup_id).logo ,size: '50') %> <%= @startups.find(@semifinalstartups.where(semifinalposition_id: 2).first.startup_id).name %></p>
+        </div>
+    <% end %>
+  </div>
+  <div class='col-md-4'></div>
+  <div class='col-md-2'></div>
+  <div class="col-md-2">
+    <%= link_to startup_path(@startups.find(9)), remote: true, :action => 'go' do %> 
+      <div class='card hoverable style-card-r'>
+        <p class='marginbottom-p'><%= @startups.find(9).name %> <%= image_tag(@startups.find(9).logo ,size: '50') %> </p>   
+      </div>
+    <% end %>
+  </div>
+</div>
+
+<!-- Row 6-->
+<div class='row text-center'>
+  <div class='col-md-2'><h4>Group 2</h4></div>
+  <div class='col-md-2'></div>
+  <div class='col-md-4'></div>
+  <div class='col-md-2'></div>
+  <div class='col-md-2'><h4>Group 4</h4></div>
+</div>
+
+<!-- Row 7-->
+<div class='row text-center'>
+  <div class="col-md-2">
+    <%= link_to startup_path(@startups.find(4)), remote: true, :action => 'go' do %> 
+      <div class='card hoverable style-card'>
+        <p class='marginbottom-p'><%= image_tag(@startups.find(4).logo ,size: '50') %> <%= @startups.find(4).name %>  </p>   
+      </div>
+    <% end %>
+  </div>
+  <div class="col-md-2">
+    <%= link_to startup_path(@startups.find(@semifinalstartups.where(semifinalposition_id: 3).first.startup_id)), remote: true, :action => 'go' do %>
+        <div class='card hoverable style-card'>
+          <p class='marginbottom-p'><%= image_tag(@startups.find(@semifinalstartups.where(semifinalposition_id: 3).first.startup_id).logo ,size: '50') %> <%= @startups.find(@semifinalstartups.where(semifinalposition_id: 3).first.startup_id).name %></p>
+        </div>
+    <% end %>
+  </div>
+  <div class='col-md-4'></div>
+  <div class='col-md-2'></div>
+  <div class="col-md-2">
+    <%= link_to startup_path(@startups.find(10)), remote: true, :action => 'go' do %> 
+      <div class='card hoverable style-card-r'>
+        <p class='marginbottom-p'><%= @startups.find(10).name %> <%= image_tag(@startups.find(10).logo ,size: '50') %> </p>   
+      </div>
+    <% end %>
+  </div>
+</div>
+
+<!-- Row 8-->
+<div class='row text-center'>
+  <div class="col-md-2">
+    <%= link_to startup_path(@startups.find(5)), remote: true, :action => 'go' do %> 
+      <div class='card hoverable style-card'>
+        <p class='marginbottom-p'><%= image_tag(@startups.find(5).logo ,size: '50') %> <%= @startups.find(5).name %>  </p>   
+      </div>
+    <% end %>
+  </div>
+  <div class="col-md-2">
+    <%= link_to startup_path(@startups.find(@semifinalstartups.where(semifinalposition_id: 4).first.startup_id)), remote: true, :action => 'go' do %>
+        <div class='card hoverable style-card'>
+          <p class='marginbottom-p'><%= image_tag(@startups.find(@semifinalstartups.where(semifinalposition_id: 4).first.startup_id).logo ,size: '50') %> <%= @startups.find(@semifinalstartups.where(semifinalposition_id: 4).first.startup_id).name %></p>
+        </div>
+    <% end %>
+  </div>
+  <div class='col-md-4'></div>
+  <div class='col-md-2'></div>
+  <div class="col-md-2">
+    <%= link_to startup_path(@startups.find(11)), remote: true, :action => 'go' do %> 
+      <div class='card hoverable style-card-r'>
+        <p class='marginbottom-p'><%= @startups.find(11).name %> <%= image_tag(@startups.find(11).logo ,size: '50') %> </p>   
+      </div>
+    <% end %>
+  </div>
+</div>
+
+<!-- Row 9-->
+<div class='row text-center'>
+  <div class="col-md-2">
+    <%= link_to startup_path(@startups.find(6)), remote: true, :action => 'go' do %> 
+      <div class='card hoverable style-card'>
+        <p class='marginbottom-p'><%= image_tag(@startups.find(6).logo ,size: '50') %> <%= @startups.find(6).name %>  </p>   
+      </div>
+    <% end %>
+  </div>
+  <div class='col-md-2'></div>
+  <div class='col-md-4'></div>
+  <div class='col-md-2'></div>
+  <div class="col-md-2">
+    <%= link_to startup_path(@startups.find(12)), remote: true, :action => 'go' do %> 
+      <div class='card hoverable style-card-r'>
+        <p class='marginbottom-p'><%= @startups.find(12).name %> <%= image_tag(@startups.find(12).logo ,size: '50') %> </p>   
+      </div>
+    <% end %>
+  </div>
+</div>
+

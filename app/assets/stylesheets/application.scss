@@ -1,6 +1,22 @@
 @import "bootstrap";
+@import "mdb";
 
 
+.style-card{
+    padding-left: 0px;
+    padding-right: 0px;
+    margin-bottom: 10px;
+    text-align: left;
+    margin-bottom: 30px;
+}
+
+.style-card-r{
+    padding-left: 0px;
+    padding-right: 0px;
+    margin-bottom: 10px;
+    text-align: right;
+    margin-bottom: 30px;
+}
 
 .height-p{
   height: 65px;
@@ -61,6 +77,14 @@
     height: 60px;
     width: 60px;
 }
+
+.container-fs{
+  width:100%;  
+
+}
+
+
+
 
 
 

@@ -42,6 +42,9 @@ gem 'rails_12factor'
 #added paperclip for image upload
 gem "paperclip"
 
+#adding google material
+#gem 'materialize-sass'
+
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'

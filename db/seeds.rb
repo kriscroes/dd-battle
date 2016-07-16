@@ -68,6 +68,8 @@ Semifinalposition.create(name: "3")
 Semifinalposition.create(name: "4")
 Semifinalposition.create(name: "5")
 Semifinalposition.create(name: "6")
+Semifinalposition.create(name: "7")
+Semifinalposition.create(name: "8")
 
 Semifinalgroup.create(startup_id: 1, semifinalposition_id: 1)
 Semifinalgroup.create(startup_id: 3, semifinalposition_id: 2)
@@ -75,15 +77,19 @@ Semifinalgroup.create(startup_id: 5, semifinalposition_id: 3)
 Semifinalgroup.create(startup_id: 7, semifinalposition_id: 4)
 Semifinalgroup.create(startup_id: 9, semifinalposition_id: 5)
 Semifinalgroup.create(startup_id: 12, semifinalposition_id: 6)
+Semifinalgroup.create(startup_id: 2, semifinalposition_id: 7)
+Semifinalgroup.create(startup_id: 6, semifinalposition_id: 8)
 
 #final positions and group
 Finalposition.create(name: "1")
 Finalposition.create(name: "2")
 Finalposition.create(name: "3")
+Finalposition.create(name: "4")
 
 Finalgroup.create(startup_id: 3, finalposition_id: 1, iswinner: true)
 Finalgroup.create(startup_id: 7, finalposition_id: 2, iswinner: false)
-Finalgroup.create(startup_id: 12, finalposition_id: 3, iswinner: false) 
+Finalgroup.create(startup_id: 12, finalposition_id: 3, iswinner: false)
+Finalgroup.create(startup_id: 4, finalposition_id: 4, iswinner: false)  
 
 #participants(founders) per startup
 Startupparticipant.create(startup_id: 1, participant_id: 1, role: "CEO")

@@ -1,44 +1,54 @@
 <!-- Row 1 -->
 <div id="product-modal" class="modal fade" tabindex="-1" role="dialog"></div>
 
+<iframe src="https://dd-dasboard.herokuapp.com/">
+  <p>Your browser does not support iframes.</p>
+</iframe>
+
 <div class='row text-center'>
   <div class='col-md-3'><h2>Qualifications</h2></div>
+  <div class='col-md-1'></div>
   <div class='col-md-3'><h2>Semifinals</h2></div>
+  <div class='col-md-1'></div>
   <div class='col-md-3'><h2>Final</h2></div>
-  <div class='col-md-3'><h2>Winner</h2></div>
+  <div class='col-md-1'><h2>Winner</h2></div>
 </div>
 
 <!-- Row 2-->
 <div class='row text-center'>
   <div class='col-md-3'><h4>Round 1</h4></div>
+  <div class='col-md-1'></div>
   <div class='col-md-3'></div>
+  <div class='col-md-1'></div>
   <div class='col-md-3'></div>
-  <div class='col-md-3'></div>
+  <div class='col-md-1'></div>
 </div>
 
 <!-- Row 3-->
 <div class='row text-center'>
   <!-- Qualifications pos 1-->
-  <div class='col-md-3 paddingtop-db'>
-    <p class='marginbottom-p'>
-      <%= link_to image_tag(@startups.find(1).logo.url ,size: '50'), startup_path(@startups.find(1)) , remote: true  %>
-      <%=@startups.find(1).name %>  
-    </p>
-      
+
+<%= link_to startup_path(@startups.find(1)), remote: true, :action => 'go' do %> 
+  <div class='card hoverable col-md-3 paddingtop-db paddingbottom-db marginbottom-db'>
+    <p class='marginbottom-p'><%= image_tag(@startups.find(1).logo ,size: '50') %> <%= @startups.find(1).name %>  </p>   
   </div>
+  <% end %>
+  <div class='col-md-1'></div>
   <div class='col-md-3'></div>
+  <div class='col-md-1'></div>
   <div class='col-md-3'></div>
-  <div class='col-md-3'></div>
+  <div class='col-md-1'></div>
 </div>
 
 <!-- Row 4-->
 <div class='row text-center'>
   <!-- Qualifications pos 2-->
-  <div class='col-md-3 paddingtop-db'>
+  <div class='card col-md-3 paddingtop-db paddingbottom-db marginbottom-db'>
     <p class='marginbottom-p'>
        <%= image_tag @startups.find(2).logo.url ,size: '50'%> <%=@startups.find(2).name %>  
     </p>
   </div>
+  <div class='col-md-1'></div>
   <!-- Semifinals pos 1-->
   <div class='col-md-3 paddingtop-db'>
     <p class='marginbottom-p'>
@@ -46,31 +56,35 @@
       <%=@startups.find(@semifinalstartups.where(semifinalposition_id: 1).first.startup_id ).name %> 
     </p>
   </div>
+  <div class='col-md-1'></div>
   <div class='col-md-3'></div>
-  <div class='col-md-3'></div>
+  <div class='col-md-1'></div>
 </div>
 
 <!-- Row 5 -->
 <div class='row text-center'>
   <!-- Qualifications pos 3-->
-  <div class='col-md-3 paddingtop-db'>
+  <div class='card col-md-3 paddingtop-db paddingbottom-db marginbottom-db'>
     <p class='marginbottom-p'>
        <%= image_tag @startups.find(3).logo.url ,size: '50'%> <%=@startups.find(3).name %>  
     </p>
   </div>
+  <div class='col-md-1'></div>
   <div class='col-md-3'></div>
+  <div class='col-md-1'></div>
   <div class='col-md-3'></div>
-  <div class='col-md-3'></div>
+  <div class='col-md-1'></div>
 </div>
 
 <!-- Row 6 -->
 <div class='row text-center'>
   <!-- Qualifications pos 4-->
-  <div class='col-md-3 paddingtop-db paddingbottom-db'>
+  <div class='card col-md-3 paddingtop-db paddingbottom-db marginbottom-db'>
     <p class='marginbottom-p'>
        <%= image_tag @startups.find(4).logo.url ,size: '50'%> <%=@startups.find(4).name %>  
     </p>
   </div>
+  <div class='col-md-1'></div>
   <!-- Semifinals pos 2-->
   <div class='col-md-3 paddingtop-db'>
     <p class='marginbottom-p'>
@@ -78,14 +92,17 @@
       <%=@startups.find(@semifinalstartups.where(semifinalposition_id: 2).first.startup_id ).name %>   
     </p>
   </div>
+  <div class='col-md-1'></div>
   <div class='col-md-3'></div>
-  <div class='col-md-3'></div>
+  <div class='col-md-1'></div>
 </div>
 
 <!-- Row 6 -->
 <div class='row text-center'>
   <div class='col-md-3'><h4 class='paddingtop-round'>Round 2</h4></div>
+  <div class='col-md-1'></div>
   <div class='col-md-3'></div>
+  <div class='col-md-1'></div>
   <!-- Finals pos 1-->
   <div class='col-md-3 paddingtop-db'>
     <p class='marginbottom-p'>
@@ -93,7 +110,7 @@
       <%=@startups.find(@finalstartups.where(finalposition_id: 1).first.startup_id ).name %>  
     </p>
   </div>
-  <div class='col-md-3'></div>
+  <div class='col-md-1'></div>
 </div>
 
 <!-- Row 7 -->
@@ -104,6 +121,7 @@
        <%= image_tag @startups.find(5).logo.url ,size: '50'%> <%=@startups.find(5).name %>  
     </p>
   </div>
+  <div class='col-md-1'></div>
   <!-- Semifinals pos 3-->
   <div class='col-md-3 paddingtop-db'>
     <p class='marginbottom-p'>
@@ -111,8 +129,9 @@
       <%=@startups.find(@semifinalstartups.where(semifinalposition_id: 3).first.startup_id ).name %>     
     </p>
   </div>
+  <div class='col-md-1'></div>
   <div class='col-md-3'></div>
-  <div class='col-md-3'><img src="<%= image_url('throphy.png')%>" height="100" width="100" class="bringtofront"></div>
+  <div class='col-md-1'><img src="<%= image_url('throphy.png')%>" height="100" width="100" class="bringtofront"></div>
 </div>
 
 <!-- Row 8 -->
@@ -123,7 +142,9 @@
        <%= image_tag @startups.find(6).logo.url ,size: '50'%> <%=@startups.find(6).name %>  
     </p>
   </div>
+  <div class='col-md-1'></div>
   <div class='col-md-3'></div>
+  <div class='col-md-1'></div>
   <!-- Finals pos 2-->
   <div class='col-md-3 paddingtop-db'>
     <p class='marginbottom-p'>
@@ -132,7 +153,7 @@
     </p>
   </div>
   <!-- Demo Day Winner-->
-  <div class='col-md-3 paddingtop-db'>
+  <div class='col-md-1 paddingtop-db'>
     <p class='marginbottom-p'>
       <% if (@finalstartups.where(iswinner: true)).count == 0 %>
         <img src="<%= image_url('noimage.png')%>" height="50" width="50"> Undefined
@@ -153,6 +174,7 @@
       <%= image_tag @startups.find(7).logo.url ,size: '50'%> <%=@startups.find(7).name %>  
     </p>
   </div>
+  <div class='col-md-1'></div>
   <!-- Semifinals pos 4-->
   <div class='col-md-3 paddingtop-db'>
     <p class='marginbottom-p'>
@@ -160,8 +182,9 @@
       <%=@startups.find(@semifinalstartups.where(semifinalposition_id: 4).first.startup_id ).name %>  
     </p>
   </div>
+  <div class='col-md-1'></div>
   <div class='col-md-3'></div>
-  <div class='col-md-3'></div>
+  <div class='col-md-1'></div>
 </div>
 
 <!-- Row 10 -->
@@ -172,7 +195,9 @@
        <%= image_tag @startups.find(8).logo.url ,size: '50'%> <%=@startups.find(8).name %>  
     </p>
   </div>
+  <div class='col-md-1'></div>
   <div class='col-md-3'></div>
+  <div class='col-md-1'></div>
   <!-- Finals pos 3-->
   <div class='col-md-3 paddingtop-db paddingbottom-db'>
     <p class='marginbottom-p'>
@@ -181,7 +206,7 @@
     </p>
   </div>
 
-  <div class='col-md-3'></div>
+  <div class='col-md-1'></div>
 </div>
 
 <!-- Row 11 -->
@@ -189,6 +214,7 @@
   <div class='col-md-3'>
     <h4 class='paddingtop-round'>Round 3</h4>
   </div>
+  <div class='col-md-1'></div>
   <!-- Semifinals pos 5-->
   <div class='col-md-3 paddingtop-db'>
     <p class='marginbottom-p'>
@@ -196,8 +222,9 @@
       <%=@startups.find(@semifinalstartups.where(semifinalposition_id: 5).first.startup_id ).name %>  
     </p>
   </div>
+  <div class='col-md-1'></div>
   <div class='col-md-3'></div>
-  <div class='col-md-3'></div>
+  <div class='col-md-1'></div>
 </div>
 
 <!-- Row 12 -->
@@ -208,9 +235,11 @@
        <%= image_tag @startups.find(9).logo.url ,size: '50'%> <%=@startups.find(9).name %>  
     </p>
   </div>
+  <div class='col-md-1'></div>
   <div class='col-md-3'></div>
+  <div class='col-md-1'></div>
   <div class='col-md-3'></div>
-  <div class='col-md-3'></div>
+  <div class='col-md-1'></div>
 </div>
 
 <!-- Row 13 -->
@@ -221,6 +250,7 @@
        <%= image_tag @startups.find(10).logo.url ,size: '50'%> <%=@startups.find(10).name %>  
     </p>
   </div>
+  <div class='col-md-1'></div>
   <!-- Semifinals pos 6-->
   <div class='col-md-3 paddingtop-db'>
     <p class='marginbottom-p'>
@@ -228,8 +258,9 @@
       <%=@startups.find(@semifinalstartups.where(semifinalposition_id: 6).first.startup_id ).name %>   
     </p>
   </div>
+  <div class='col-md-1'></div>
   <div class='col-md-3'></div>
-  <div class='col-md-3'></div>
+  <div class='col-md-1'></div>
 </div>
 
 <!-- Row 14 -->
@@ -240,9 +271,11 @@
        <%= image_tag @startups.find(11).logo.url ,size: '50'%> <%=@startups.find(11).name %>  
     </p>
   </div>
+  <div class='col-md-1'></div>
   <div class='col-md-3'></div>
+  <div class='col-md-1'></div>
   <div class='col-md-3'></div>
-  <div class='col-md-3'></div>
+  <div class='col-md-1'></div>
 </div>
 
 <!-- Row 15 -->
@@ -253,9 +286,11 @@
       <%= image_tag @startups.find(12).logo.url ,size: '50'%> <%=@startups.find(12).name %> 
     </p>
   </div>
+  <div class='col-md-1'></div>
   <div class='col-md-3'></div>
+  <div class='col-md-1'></div>
   <div class='col-md-3'></div>
-  <div class='col-md-3'></div>
+  <div class='col-md-1'></div>
 </div>
 
 

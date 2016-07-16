@@ -1,8 +1,9 @@
+
 <div class="modal-dialog">
     <div class="modal-content">
-      <div class="modal-header">
+      <div class="modal-header" style="background-color:#009688;">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h2 style="color:#18bc9c;"><%= @startup.name  %> </h2>
+        <h2 style="color:white;"><%= @startup.name  %> </h2>
       </div>
       <div class="modal-body">    
         <div class="row text-center">
@@ -10,20 +11,20 @@
             <%= image_tag @startup.logo.url ,size: '60'%>  
           </div>
           <div class="col-md-7">
-            <h4 style="color:#18bc9c;">About <%= @startup.name %></h4>
+            <h4 style="">About <%= @startup.name %></h4>
             <p><%= @startup.description %></p>
           </div>
           <div class="col-md-2">
-            <h4 style="color:#18bc9c;">Track</h4>
+            <h4 style="">Track</h4>
             <p><%= @startup.track.name %></p>
           </div>
           <div class="col-md-2">
-            <h4 style="color:#18bc9c;">Country</h4>
+            <h4 style=";">Country</h4>
             <p>United States</p>
           </div>
         </div>
         <div class="row text-center" style="margin-top:20px;">
-          <div class="col-md-12"><h4 style="color:#18bc9c;">Meet the team at ATECH</h4></div>
+          <div class="col-md-12"><h4 style="">Meet the team at ATECH</h4></div>
         </div>
         <div class="row text-center" style="margin-top:10px;">
           <div class="col-md-1">
@@ -57,8 +58,9 @@
         </div>
       
       </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+      <div class="modal-footer" style="background-color:#E0F2F1;">
+        <button type="button" class="btn btn-danger" data-dismiss="modal" style="background:#FF5252">Close</button>
+    
       </div>
     </div><!-- /.modal-content -->
   </div><!-- /.modal-dialog -->
